@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DecodeLabs Project 1 - Modern, responsive developer portfolio and tech product landing page built with semantic HTML5, CSS Grid, Flexbox, and JavaScript.">
+    <meta name="keywords" content="DecodeLabs, Developer Portfolio, Web Development, CSS Grid, Flexbox, Responsive Design, JavaScript">
+    <meta name="author" content="DecodeLabs Intern">
+    <title>AuraTech | Modern Developer Portfolio & Tech Showcase</title>
+    
+    <!-- Google Fonts: Montserrat (Headings) & Open Sans (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ==================== HEADER & NAVIGATION ==================== -->
+    <header class="site-header" id="header">
+        <div class="container header-container">
+            <!-- Brand Logo -->
+            <a href="#hero" class="logo" aria-label="AuraTech Home">
+                <span class="logo-icon"><i class="fa-solid fa-code"></i></span>
+                <span class="logo-text">Aura<span class="logo-highlight">Tech</span></span>
+            </a>
+
+            <!-- Desktop & Mobile Navigation Landmark -->
+            <nav class="main-nav" id="main-nav" aria-label="Primary Navigation">
+                <ul class="nav-list" role="list">
+                    <li class="nav-item"><a href="#hero" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Action CTA & Hamburger Button -->
+            <div class="header-actions">
+                <div class="api-status-badge" id="api-status-badge" title="Backend API Connection Status">
+                    <span class="status-dot"></span>
+                    <span class="status-text" id="api-status-text">API Checking...</span>
+                </div>
+                <a href="#contact" class="btn btn-primary header-btn">Hire Me</a>
+                
+                <!-- Hamburger Button for Mobile Viewport -->
+                <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="main-nav">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Overlay backdrop for mobile navigation -->
+    <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main id="main-content">
+
+        <!-- ===== HERO SECTION ===== -->
+        <section class="hero-section" id="hero" aria-labelledby="hero-title">
+            <div class="container macro-hero-grid">
+                <!-- Left Hero Column -->
+                <div class="hero-content">
+                    <div class="badge-pill">
+                        <span class="badge-dot"></span>
+                        <span>Available for Full Stack Opportunities</span>
+                    </div>
+                    <h1 id="hero-title" class="hero-title">
+                        Crafting Next-Gen <span class="text-gradient">Digital Experiences</span>
+                    </h1>
+                    <p class="hero-description">
+                        Full Stack Engineer specializing in high-performance web applications, intuitive user interfaces, and scalable cloud architectures with precision and elegance.
+                    </p>
+                    
+                    <div class="hero-cta-group">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>Explore Projects</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Get in Touch</span>
+                        </a>
+                    </div>
+
+                    <!-- Tech Stack Badges -->
+                    <div class="hero-tech-stack">
+                        <span class="tech-stack-label">Core Tech Stack:</span>
+                        <div class="tech-icon-list">
+                            <span class="tech-tag" title="HTML5"><i class="fa-brands fa-html5"></i> HTML5</span>
+                            <span class="tech-tag" title="CSS3 Grid & Flexbox"><i class="fa-brands fa-css3-alt"></i> CSS Grid/Flex</span>
+                            <span class="tech-tag" title="JavaScript Modern ES6+"><i class="fa-brands fa-js"></i> JavaScript</span>
+                            <span class="tech-tag" title="React / Node"><i class="fa-brands fa-react"></i> React</span>
+                            <span class="tech-tag" title="Node.js"><i class="fa-brands fa-node-js"></i> Node.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Hero Column (Responsive Non-overlapping Visual) -->
+                <div class="hero-visual">
+                    <div class="hero-card-container">
+                        <div class="code-window-header">
+                            <div class="window-controls">
+                                <span class="control red"></span>
+                                <span class="control yellow"></span>
+                                <span class="control green"></span>
+                            </div>
+                            <span class="window-title">developer_profile.js</span>
+                        </div>
+                        <div class="code-window-body">
+                            <pre><code><span class="code-keyword">const</span> <span class="code-variable">developer</span> = {
+  <span class="code-property">name</span>: <span class="code-string">'DecodeLabs Engineer'</span>,
+  <span class="code-property">role</span>: <span class="code-string">'Full Stack Web Developer'</span>,
+  <span class="code-property">philosophy</span>: <span class="code-string">'Clean Code & Responsive Design'</span>,
+  <span class="code-property">skills</span>: [<span class="code-string">'Semantic HTML5'</span>, <span class="code-string">'CSS Grid'</span>, <span class="code-string">'Flexbox'</span>, <span class="code-string">'ES6+ JS'</span>],
+  <span class="code-property">status</span>: <span class="code-string">'Ready to Innovate 🚀'</span>
+};
+
+<span class="code-function">console</span>.<span class="code-method">log</span>(developer.<span class="code-property">status</span>);</code></pre>
+                        </div>
+                    </div>
+
+                    <!-- Clean Row for Floating Stats -->
+                    <div class="hero-stats-row">
+                        <div class="hero-floating-stat">
+                            <i class="fa-solid fa-bolt text-ethereal"></i>
+                            <div>
+                                <strong>100%</strong>
+                                <small>Responsive Layout</small>
+                            </div>
+                        </div>
+                        <div class="hero-floating-stat">
+                            <i class="fa-solid fa-shield-halved text-mocha"></i>
+                            <div>
+                                <strong>Clean</strong>
+                                <small>Semantic Code</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SKILLS SECTION ===== -->
+        <section class="skills-section" id="skills" aria-labelledby="skills-heading">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Technical Expertise</span>
+                    <h2 id="skills-heading" class="section-title">Core Architecture & Capabilities</h2>
+                    <p class="section-description">
+                        Building modern software solutions using robust web standards, mobile-first design, and optimized front-end performance.
+                    </p>
+                </div>
+
+                <div class="macro-skills-grid">
+                    <article class="skill-card">
+                        <div class="skill-icon-wrapper icon-blue">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <h3 class="skill-title">Semantic HTML5</h3>
+                        <p class="skill-text">
+                            Structured markup using proper landmarks (&lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;article&gt;) ensuring accessibility, screen reader compatibility, and search engine optimization.
+                        </p>
+                        <div class="skill-footer">
+                            <span class="skill-badge">WCAG 2.1 Ready</span>
+                            <span class="skill-badge">SEO Optimized</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-icon-wrapper icon-mocha">
+                            <i class="fa-solid fa-table-cells"></i>
+                        </div>
+                        <h3 class="skill-title">CSS Grid & Flexbox</h3>
+                        <p class="skill-text">
+                            Utilizing CSS Grid for macro-layout structure and Flexbox for micro-component alignment, creating flexible systems that adapt fluidly across all device viewports.
+                        </p>
+                        <div class="skill-footer">
+                            <span class="skill-badge">Macro Grids</span>
+                            <span class="skill-badge">Flex Components</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-icon-wrapper icon-blue">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </div>
+                        <h3 class="skill-title">Mobile-First Strategy</h3>
+                        <p class="skill-text">
+                            Progressive enhancement starting from single-column mobile viewports (375px), scaling seamlessly to tablet (768px) and desktop (1024px+) layouts via media queries.
+                        </p>
+                        <div class="skill-footer">
+                            <span class="skill-badge">768px Breakpoint</span>
+                            <span class="skill-badge">1024px Desktop</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-icon-wrapper icon-mocha">
+                            <i class="fa-solid fa-code-compare"></i>
+                        </div>
+                        <h3 class="skill-title">Modern JavaScript</h3>
+                        <p class="skill-text">
+                            Interactive state management, DOM manipulation, asynchronous fetching, smooth event listeners, and interactive UI components without heavy framework bloat.
+                        </p>
+                        <div class="skill-footer">
+                            <span class="skill-badge">Vanilla ES6+</span>
+                            <span class="skill-badge">Event Handling</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROJECTS SHOWCASE SECTION ===== -->
+        <section class="projects-section" id="projects" aria-labelledby="projects-heading">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <span class="section-subtitle">Portfolio Showcase</span>
+                        <h2 id="projects-heading" class="section-title">Featured Projects</h2>
+                    </div>
+                    <div class="project-filter-group" role="tablist" aria-label="Project Categories">
+                        <button class="filter-btn active" role="tab" aria-selected="true" data-filter="all">All Projects</button>
+                        <button class="filter-btn" role="tab" aria-selected="false" data-filter="frontend">Frontend</button>
+                        <button class="filter-btn" role="tab" aria-selected="false" data-filter="fullstack">Full Stack</button>
+                        <button class="filter-btn" role="tab" aria-selected="false" data-filter="ui">UI/UX Design</button>
+                    </div>
+                </div>
+
+                <div class="macro-projects-grid" id="projects-grid">
+                    
+                    <article class="project-card" data-category="frontend">
+                        <div class="project-image-wrapper">
+                            <div class="project-placeholder-img img-gradient-1">
+                                <i class="fa-solid fa-chart-line project-icon-bg"></i>
+                                <span class="category-badge">Frontend</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Analytics Dashboard Pro</h3>
+                            <p class="project-summary">
+                                A high-performance analytics interface featuring custom CSS Grid dashboard widgets, responsive data tables, and dark/light color themes.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS Grid</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                            <div class="project-card-footer">
+                                <button class="btn-link view-details-btn" data-project="1">
+                                    <span>View Details</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </button>
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="View Source Code on GitHub">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="fullstack">
+                        <div class="project-image-wrapper">
+                            <div class="project-placeholder-img img-gradient-2">
+                                <i class="fa-solid fa-cloud project-icon-bg"></i>
+                                <span class="category-badge">Full Stack</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">CloudSync SaaS Landing</h3>
+                            <p class="project-summary">
+                                Product landing page with interactive pricing calculator, testimonial slider, mobile hamburger navigation, and contact form validation.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Flexbox</span>
+                                <span class="tag">ES6 Modules</span>
+                                <span class="tag">Node API</span>
+                            </div>
+                            <div class="project-card-footer">
+                                <button class="btn-link view-details-btn" data-project="2">
+                                    <span>View Details</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </button>
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="View Source Code on GitHub">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="ui">
+                        <div class="project-image-wrapper">
+                            <div class="project-placeholder-img img-gradient-3">
+                                <i class="fa-solid fa-wallet project-icon-bg"></i>
+                                <span class="category-badge">UI/UX Design</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Digital Udhaar Finance Web App</h3>
+                            <p class="project-summary">
+                                Clean financial ledger and debt-tracking web app UI built with warm aesthetic colors, accessibility landmarks, and instant search filter.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">CSS Variables</span>
+                                <span class="tag">Semantic HTML</span>
+                                <span class="tag">UX Design</span>
+                            </div>
+                            <div class="project-card-footer">
+                                <button class="btn-link view-details-btn" data-project="3">
+                                    <span>View Details</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </button>
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="View Source Code on GitHub">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== INTERACTIVE EXPERIENCE & METRICS SECTION ===== -->
+        <section class="experience-section" id="experience" aria-labelledby="experience-heading">
+            <div class="container">
+                <div class="macro-experience-grid">
+                    <div class="experience-info">
+                        <span class="section-subtitle">Performance & Impact</span>
+                        <h2 id="experience-heading" class="section-title">Engineered for Scalability & Speed</h2>
+                        <p class="section-description">
+                            Every interface is designed mobile-first, ensuring lighthouse performance scores of 95+ across Accessibility, SEO, and Best Practices.
+                        </p>
+
+                        <div class="metrics-grid">
+                            <div class="metric-card">
+                                <span class="metric-number">99%</span>
+                                <span class="metric-label">Responsive Accuracy</span>
+                            </div>
+                            <div class="metric-card">
+                                <span class="metric-number">100%</span>
+                                <span class="metric-label">Semantic HTML Validated</span>
+                            </div>
+                            <div class="metric-card">
+                                <span class="metric-number">60fps</span>
+                                <span class="metric-label">Smooth UI Animations</span>
+                            </div>
+                            <div class="metric-card">
+                                <span class="metric-number">0ms</span>
+                                <span class="metric-label">Layout Shift (CLS)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="palette-explorer-card">
+                        <div class="palette-header">
+                            <i class="fa-solid fa-palette text-ethereal"></i>
+                            <h3>2025 Warm Palette System</h3>
+                        </div>
+                        <p class="palette-intro">
+                            Click any token to test interactive background highlight states live on this interface:
+                        </p>
+                        <div class="palette-swatches">
+                            <button class="swatch-btn mocha" data-color="#88856F" aria-label="Select Mocha Mousse Color">
+                                <span class="swatch-color" style="background-color: #88856F;"></span>
+                                <span class="swatch-info">
+                                    <strong>Mocha Mousse</strong>
+                                    <code>#88856F</code>
+                                </span>
+                            </button>
+                            <button class="swatch-btn ethereal" data-color="#A0D4E0" aria-label="Select Ethereal Blue Color">
+                                <span class="swatch-color" style="background-color: #A0D4E0;"></span>
+                                <span class="swatch-info">
+                                    <strong>Ethereal Blue</strong>
+                                    <code>#A0D4E0</code>
+                                </span>
+                            </button>
+                            <button class="swatch-btn moonlit" data-color="#F2F0EA" aria-label="Select Moonlit Grey Color">
+                                <span class="swatch-color" style="background-color: #F2F0EA;"></span>
+                                <span class="swatch-info">
+                                    <strong>Moonlit Grey</strong>
+                                    <code>#F2F0EA</code>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="palette-feedback" id="palette-feedback">
+                            Active Accent: <strong>Ethereal Blue (#A0D4E0)</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT SECTION ===== -->
+        <section class="contact-section" id="contact" aria-labelledby="contact-heading">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Get In Touch</span>
+                    <h2 id="contact-heading" class="section-title">Let's Build Something Great</h2>
+                    <p class="section-description">
+                        Have a project in mind or want to connect for DecodeLabs collaboration? Send me a message below.
+                    </p>
+                </div>
+
+                <div class="macro-contact-grid">
+                    <div class="contact-info-card">
+                        <h3>Contact Information</h3>
+                        <p>Feel free to reach out via email, phone, or connect on social platforms.</p>
+                        
+                        <div class="contact-detail-list">
+                            <div class="contact-detail-item">
+                                <div class="detail-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <small>Email</small>
+                                    <strong>intern@decodelabs.com</strong>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <div class="detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div>
+                                    <small>Location</small>
+                                    <strong>India (Remote / On-site)</strong>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <div class="detail-icon"><i class="fa-solid fa-briefcase"></i></div>
+                                <div>
+                                    <small>Program</small>
+                                    <strong>DecodeLabs Full Stack Internship</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links-group">
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub Profile">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn Profile">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Twitter Profile">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" id="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="user-name">Full Name <span class="required">*</span></label>
+                            <input type="text" id="user-name" name="name" class="form-input" placeholder="e.g., Alex Johnson" required>
+                            <span class="error-msg" id="name-error">Please enter your full name.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="user-email">Email Address <span class="required">*</span></label>
+                            <input type="email" id="user-email" name="email" class="form-input" placeholder="alex@example.com" required>
+                            <span class="error-msg" id="email-error">Please enter a valid email address.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="user-subject">Subject</label>
+                            <input type="text" id="user-subject" name="subject" class="form-input" placeholder="Project Inquiry / Feedback">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="user-message">Message <span class="required">*</span></label>
+                            <textarea id="user-message" name="message" class="form-input form-textarea" rows="4" placeholder="Tell me about your project or inquiry..." required></textarea>
+                            <span class="error-msg" id="message-error">Please write your message.</span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary form-submit-btn">
+                            <span>Send Message</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="site-footer" id="footer">
+        <div class="container macro-footer-grid">
+            <div class="footer-brand">
+                <a href="#hero" class="logo">
+                    <span class="logo-icon"><i class="fa-solid fa-code"></i></span>
+                    <span class="logo-text">Aura<span class="logo-highlight">Tech</span></span>
+                </a>
+                <p class="footer-tagline">
+                    DecodeLabs Project 1 - Responsive Frontend Interface following warm 2025 design standards and CSS Grid/Flexbox architecture.
+                </p>
+            </div>
+
+            <div class="footer-links-col">
+                <h4 class="footer-heading">Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links-col">
+                <h4 class="footer-heading">Technical Specs</h4>
+                <ul class="footer-specs">
+                    <li><i class="fa-solid fa-check text-ethereal"></i> Semantic HTML5</li>
+                    <li><i class="fa-solid fa-check text-ethereal"></i> CSS Grid Macro</li>
+                    <li><i class="fa-solid fa-check text-ethereal"></i> Flexbox Micro</li>
+                    <li><i class="fa-solid fa-check text-ethereal"></i> 768px & 1024px Media Queries</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 AuraTech / DecodeLabs Internship. All rights reserved.</p>
+                <button class="back-to-top" id="back-to-top" aria-label="Back to Top">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== INTERACTIVE MODAL DIALOG ==================== -->
+    <div class="modal" id="project-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+        <div class="modal-backdrop" id="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close-btn" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <span class="badge-pill" id="modal-category">Category</span>
+                <h3 id="modal-title" class="modal-title">Project Title</h3>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <p>Project details loading...</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="modal-close-action">Close</button>
+                <a href="#" id="modal-live-link" target="_blank" class="btn btn-primary">Live Demo</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
